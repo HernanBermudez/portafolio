@@ -46,21 +46,10 @@ export default {
   }, ],
   // orderings: [{
   //   name: 'jobOrder',
-  //   tile: 'JobOrder',
+  //   tile: 'Job Order',
   //   by: [{
-  //     field: 'jobOrder',
-  //     direction: 'desc'
+  //     field: '_createdAt',
+  //     direction: 'asc'
   //   }]
   // }],
-  // preview: {
-  //   select: {
-  //     title: 'JobOrder',
-  //   },
-  //   prepare(order, viewOptions = {}) {
-  //     const title = viewOptions.ordering && viewOptions.ordering.name === 'jobOrder' ? `${order.title} (${order.jobOrder})` : order.title
-  //     return {
-  //       title: title
-  //     }
-  //   }
-  // }
 };

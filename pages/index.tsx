@@ -1,4 +1,4 @@
-import type { GetStaticProps } from 'next';
+import type { GetServerSideProps } from 'next';
 import Head from 'next/head';
 import About from '../components/About';
 import Header from '../components/Header';
@@ -72,7 +72,7 @@ const Home = ({
 				<Projects projects={projects} />
 			</section>
 
-			<section id='contact' className='snap-end'>
+			<section id='contact' className='snap-start'>
 				<Contacts contact={contact} />
 			</section>
 
@@ -95,7 +95,7 @@ const Home = ({
 
 export default Home;
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getServerSideProps: GetServerSideProps = async () => {
 	const pageInfo: PageInfo[] = await fetchPageInfo();
 	const experience: Experience[] = await fetchExperience();
 	const skills: Skill[] = await fetchSkills();
@@ -112,10 +112,11 @@ export const getStaticProps: GetStaticProps = async () => {
 			projects,
 			contact,
 		},
+		// This is for ISR (Incremental static regeneration)
 		// Next.js will attempt to re-generate the page
 		// when a request comes in
 		// At most once every 10 seconds
-		revalidate: 10,
+		// revalidate: 10,
 	};
 };
 

@@ -18,15 +18,15 @@ const Skills = ({ skills }: Props) => {
 			<h3 className='absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl'>
 				Skills
 			</h3>
-			<h3 className='absolute top-36 uppercase tracking-[3px] text-gray-500 text-sm'>
+			<h3 className='absolute px-8 top-36 uppercase tracking-[3px] text-gray-500 text-sm'>
 				Hover over a skill for current proficiency
 			</h3>
 
-			<div className='absolute top-52 grid xl:grid-cols-7 md:grid-cols-6 grid-cols-4 gap-5'>
-				{skills.slice(0, skills.length / 2).map(skill => {
+			<div className='absolute top-52 grid grid-cols-4 md:grid-cols-6  gap-5'>
+				{skills?.slice(0, skills?.length / 2).map(skill => {
 					return <Skill key={skill._id} skill={skill} />;
 				})}
-				{skills.slice(skills.length / 2, skills.length).map(skill => {
+				{skills?.slice(skills?.length / 2, skills?.length).map(skill => {
 					return <Skill key={skill._id} skill={skill} directionLeft />;
 				})}
 			</div>

@@ -3,15 +3,11 @@ import { groq } from 'next-sanity';
 import { sanityClient } from '../sanity';
 
 const query = groq`
-	*[_type == "experience"] {
+	*[_type == "experience"] | order(_createdAt asc) {
 	...,
-	technologies[]->
-	} | order(_createdAt asc)
+	technologies[]->,
+	} 
 `;
-
-type Data = {
-	experience: Experience[];
-};
 
 export const fetchExperience = async () => {
 	const experience: Experience[] = await sanityClient.fetch(query);
@@ -19,6 +15,10 @@ export const fetchExperience = async () => {
 };
 
 // Function to test local:
+
+// type Data = {
+// 	experience: Experience[];
+// };
 
 // export const fetchExperience = async () => {
 // 	const res = await fetch(

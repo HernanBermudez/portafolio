@@ -10,7 +10,7 @@ type Props = {
 
 const ExperienceCard = ({ experience }: Props) => {
 	return (
-		<article className='flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[500px] md:w-[600px] xl:w-[1200px] snap-center bg-[#292929] p-10 hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200 overflow-hidden'>
+		<article className='flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[400px] sm:w-[500px] md:w-[600px] xl:w-[1200px] snap-center bg-[#292929] p-10 hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200 overflow-hidden'>
 			<motion.img
 				initial={{
 					y: -100,
@@ -68,7 +68,7 @@ const ExperienceCard = ({ experience }: Props) => {
 							.join(' ')}
 			</p>
 
-			<ul className='list-disc list-inside space-y-4 ml-5 text-lg max-h-96 pr-5 scroll scrollbar-thin scrollbar-text-black scrollbar-thumb-[#F7AB0A]/80'>
+			<ul className='list-disc list-inside text-justify space-y-4 ml-5 text-lg max-h-96 pr-5 scroll scrollbar-thin scrollbar-text-black scrollbar-thumb-[#F7AB0A]/80'>
 				{experience.points.map((point, i) => {
 					return <li key={i}>{point}</li>;
 				})}
