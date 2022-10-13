@@ -31,7 +31,7 @@ export default function About({ pageInfo }: Props) {
 				viewport={{
 					once: true,
 				}}
-				className='md:mb-0 flex-shrink-0 w-48 rounded-full object-cover md:rounded-lg md:w-64 md:h-95 xl:w-[350px] xl:h-[450px]'
+				className='md:mb-0 flex-shrink-0 w-48 h-48 rounded-full object-cover md:rounded-lg md:w-64 md:h-72 xl:w-[350px] xl:h-[450px]'
 			/>
 
 			<div className='space-y-10 px-0 sm:pt-10  md:px-10'>

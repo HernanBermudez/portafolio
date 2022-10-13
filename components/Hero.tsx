@@ -22,7 +22,7 @@ export default function Hero({ pageInfo }: Props) {
 	});
 
 	return (
-		<div className='h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden pt-24'>
+		<div className='h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden pt-18'>
 			<BackgroundCircles />
 			<div className='relative rounded-fill h-32 w-32 mx-auto'>
 				<Image
