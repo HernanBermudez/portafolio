@@ -70,13 +70,13 @@ const Contact = ({ contact }: Props) => {
 					<input
 						{...register('subject')}
 						placeholder='Subject'
-						className='contactInput'
+						className='contactInputSecondary'
 						type='text'
 					/>
 					<textarea
 						{...register('message')}
 						placeholder='Message'
-						className='contactInput'
+						className='contactInputSecondary'
 					/>
 					<button
 						type='submit'
