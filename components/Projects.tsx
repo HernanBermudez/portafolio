@@ -68,7 +68,7 @@ const Projects = ({ projects }: Props) => {
 									target='_blank'
 									rel='noreferrer'
 								>
-									Link to project
+									{project?.linkToBuild ? 'Link to project' : ''}
 								</a>
 							</p>
 						</div>
