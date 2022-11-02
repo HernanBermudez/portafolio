@@ -21,7 +21,7 @@ const Contact = ({ contact }: Props) => {
 	};
 	return (
 		<div className='h-screen flex flex-col relative text-center px-10 justify-evenly items-center'>
-			<h3 className='absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl'>
+			<h3 className='absolute top-14 uppercase tracking-[20px] text-gray-500 text-2xl'>
 				contact me
 			</h3>
 
